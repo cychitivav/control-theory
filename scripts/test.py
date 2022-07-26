@@ -2,7 +2,12 @@ import control as ct
 import matplotlib.pyplot as plt
 # from control.matlab import *
 
-sys = ct.ss(1, 1, 1, 1)
+A = [[0, 1], [-2, -10]]
+B = [[0], [2]]
+C = [1, 0]
+D = 0
+
+sys = ct.ss(A,B,C,D)
 
 print(sys)
 
@@ -10,6 +15,10 @@ t, y = ct.step_response(sys)
 
 print(t.shape)
 
-plt.figure()
+plt.figure(1)
+plt.title("Step Response")
+plt.xlabel("Time (s)")
+plt.ylabel("Amplitude")
 plt.plot(t,y)
-plt.show()
+plt.grid()
+plt.pause(5)
