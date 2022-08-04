@@ -45,32 +45,8 @@ Generally the domain is the one-dimensional space of the positive reals (time $t
 
 The signals can be classified into several types, but the main ones are:
 
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/30636259/182014537-74e4a09c-4de3-4ef6-a944-022c8e021845.png" width="500"/>
-</p>
-
-- **Nature of independent variable**:
-
-  - **Continuous-time (CT) signals**: are defined at every time
-    instant in a time interval of interest, and its amplitude can assume any value in a continuous range.
-  - **Discrete-Time (DT) Signals**: are defined only at discrete time instants, and its amplitude can assume any value in a
-    continuous range. \* **Digital Signals**: its amplitude can assume a value only from a finite given set.
-
-- **Symmetry**:
-
-  - **Even signals**: are symmetric around the origin, i.e. $f(x) = f(-x)$
-
-- **Periodicity**:
-
-  - **Periodic**: the signal is periodic, i.e. it repeats itself periodically.
-    - $x(t)=x(nT)$ where $n$ is an integer and $T$ is the period of the signal.
-    - $x[n]=x[n+N]$ where $N$ is the number of samples.
-  - **Non-periodic**: if doesn't satisfy the periodicity condition, the signal is non-periodic.
-
-  > **Note**: All CT sinusoidal signals are periodic, but not all DT sinusoidal signals are periodic. See [signals notebook](scripts/signals.ipynb).
-
 ```mermaid
-graph TB;
+graph LR;
     P[Classification of signals]:::green;
 
     P --> N[Nature of independent variable]:::purple;
@@ -80,7 +56,7 @@ graph TB;
     P --> I[Number of independent variable]:::purple;
     P --> F[Functional definition]:::purple;
     P --> E[Energy and power]:::purple;
-  
+
     N --> C[Continuous-time signals]:::blue;
     N --> D[Discrete-time signals]:::blue;
     C --> A[Analog signals]:::yellow;
@@ -110,10 +86,35 @@ graph TB;
 	classDef yellow  fill:#fcd158, stroke:#000;
 	classDef purple  fill:#c668fc, stroke:#000;
     classDef blue  fill:#68d2fc, stroke:#000;
-
 ```
 
+- **Nature of independent variable**:
+
+  - **Continuous-time (CT) signals**: are defined at every time
+    instant in a time interval of interest, and its amplitude can assume any value in a continuous range.
+  - **Discrete-Time (DT) Signals**: are defined only at discrete time instants, and its amplitude can assume any value in a
+    continuous range.
+	- **Digital Signals**: its amplitude can assume a value only from a finite given set.
+
+- **Symmetry**:
+
+  - **Even signals**: are symmetric around the origin, i.e. $f(x) = f(-x)$
+
+- **Periodicity**:
+
+  - **Periodic**: the signal is periodic, i.e. it repeats itself periodically.
+    - $x(t)=x(nT)$ where $n$ is an integer and $T$ is the period of the signal.
+    - $x[n]=x[n+N]$ where $N$ is the number of samples.
+  - **Non-periodic**: if doesn't satisfy the periodicity condition, the signal is non-periodic.
+
+  > **Note**: All CT sinusoidal signals are periodic, but not all DT sinusoidal signals are periodic. See [signals notebook](scripts/signals.ipynb).
+
 ##### Transformations
+There are 3 basic transformations of signals:
+* **Shift**
+* **Scale**
+* **Reversal**
+
 
 ## Resources and references
 
